@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:D:/h2data/byqdata
+    platform: h2
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: false
+        web-allow-others: false
+  servlet:
+    multipart:
+      enabled: true
+      location: d:/temp/
+      file-size-threshold: 5MB
+      max-file-size: 20MB
